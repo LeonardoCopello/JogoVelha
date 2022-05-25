@@ -94,7 +94,7 @@ function MouseOut(event){
       for(let c = 0; c < 3; c++) {
         if (jogo[l][c] == simboloAtual) {
           pontos++
-          pontos == 3 && celebraVitoria(simboloAtual, 1)
+          pontos == 3 && celebraVitoria(simboloAtual)
         }
       }
     }
@@ -105,7 +105,7 @@ function MouseOut(event){
       for (let l = 0; l < 3; l++) {
         if(jogo[l][c] == simboloAtual) {
           pontos++
-          pontos == 3 && celebraVitoria(simboloAtual, 2)
+          pontos == 3 && celebraVitoria(simboloAtual)
         }
       }
     }
@@ -115,7 +115,7 @@ function MouseOut(event){
     for (let i = 0; i < 3; i++) {
       if (jogo[i][i] == simboloAtual) {
         pontos++
-        pontos == 3 && celebraVitoria(simboloAtual, 3)
+        pontos == 3 && celebraVitoria(simboloAtual)
       }
     }
   }
@@ -133,9 +133,7 @@ function MouseOut(event){
     } 
   }
 
-  const celebraVitoria = (simboloAtual, t) => {
-    console.log(jogo)
-    console.log(t)
+  const celebraVitoria = (simboloAtual) => {
     setSimboloAtual(simboloAtual)
     setVitoria(true)
     travaTabela()
